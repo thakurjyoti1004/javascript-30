@@ -1,0 +1,19 @@
+.star{
+    display: inline-block; 
+    color: gray;
+    font-size: 80px;
+    list-style-type: none;
+    
+}
+
+#message{
+    text-align: center;
+    background-color: gray;
+    width: 500px;
+}
+.star:hover{
+    color: yellow;
+}
+.orange{
+    color: orange;
+}
