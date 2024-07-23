@@ -1,0 +1,23 @@
+// Filter Polyfill
+Array.prototype.myFilter = function (callBack) {
+	
+  	let result = [];
+    for(let i=0;i<this.length;i++){
+    		const res = callBack(this[i]);
+      	if(res===true) {
+        	result.push(this[i]);
+        }
+     	
+    }
+    return result;
+}
+
+// Map Polyfill
+Array.prototype.myMap = function (callBack) {
+  	let result = [];
+    for(let i=0;i<this.length;i++){
+    		const res = callBack(this[i]);
+        	result.push(res);
+    }
+    return result;
+}
