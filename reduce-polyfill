@@ -1,0 +1,33 @@
+ const arr =[2,5,10,20];
+ 
+Array.prototype.myReduce = function (callback,initialValue){
+
+  if(!callback || typeof callback !== "function") {
+  	return;
+  }
+  let result;
+   if(initialValue!==undefined){
+   	result = initialValue;
+    } else{
+    result = this[0]; 
+    }
+   
+    let current;
+  	if(result===this[0]){
+  	current = 1;
+  	}else{
+    	current = 0;
+    }
+
+  for(let i=current; i<this.length;i++){
+  	 result = callback(result,this[i])
+  }
+  return result;
+};
+
+const res = arr.myReduce((acc,curr) =>{
+	acc = acc + curr;
+  return acc;
+}, 0);
+console.log(res);
+
